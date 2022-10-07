@@ -1,6 +1,6 @@
 # DiArY
-Hi there, and welcome to my diary where I'll make best effort to share my
-learnings on different technologies and tools as I learn them.
+Hi there, and welcome to my **diary** where I'll make best effort to share my
+learnings on different technologies and tools progressively.
 
 It's still pretty empty so far, but I'll try to ramp up content - new or from my
 drafts.
