@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Bash script to fetch and kill the top 10 memory heavy OS processes
+
 echo "***"
 echo "Memory cleaning in progress"
 echo "***"
@@ -16,11 +18,11 @@ maybe_kill_pid(){
   CPU_USAGE=$4
 
 	test -z $PID && die "no pid passed to maybe_kill_pid()"
-	test -z $COMMAND_NAME && die "no command name passed to maybe_kill_pid()"
+	# test -z $COMMAND_NAME && die "no command name passed to maybe_kill_pid()"
 	test -z $MEM_USAGE && die "no memory usage info passed to maybe_kill_pid()"
 	test -z $CPU_USAGE && die "no cpu usage info passed to maybe_kill_pid()"
   while true; do
-    read -p "Do you wish to kill process $COMMAND_NAME. $PID It memory and cpu usage are $MEM_USAGE and $CPU_USAGE?" yn
+    read -p "Should I continue to kill process $COMMAND_NAME. $PID It memory and cpu usage are $MEM_USAGE and $CPU_USAGE?" yn
       case $yn in
           [Yy]* ) kill $PID; break;;
           [Nn]* ) echo "Did not delete process $COMMAND_NAME";;
